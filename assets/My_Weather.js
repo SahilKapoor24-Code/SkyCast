@@ -43,12 +43,14 @@ function fetchWeatherData() {
             wind.innerHTML = data.wind.speed + "Km/h";
             description.innerHTML = data.weather[0].description;
             document.querySelector("#loader").style.display = "none";
+            animateWeather();
         })
         .catch(error => {
             alert("Entered city not found.");
             document.querySelector("#loader").style.display = "none";
         })
 }
+function animateWeather(){
 let tl = gsap.timeline();
 
 gsap.to("#weatherIcon", {
@@ -87,5 +89,6 @@ tl.from("#Humid_img, #Wind_img", {
   opacity: 0,
   stagger: 0.2
 });
+}
 
 //Completed
