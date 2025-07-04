@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url(./imgs/dddepth-269.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.weather_Container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 440px;
+}
+
+.input_City {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input_City input {
+    width: 70%;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    outline: none;
+    filter: opacity(0.8);
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.input_City input:hover {
+    box-shadow: rgba(0, 0, 0, 0.18) 1.95px 1.95px 2.6px;
+}
+
+.input_City button {
+    padding: 5px 7px;
+    background-color: #0088ff;
+    color: white;
+    width: 70px;
+    height: 42px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.input_City button:hover {
+    background-color: #005fe0;
+}
+
+.main_weather_Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+
+}
+
+.left_Content img {
+    width: 100px;
+    height: 100px;
+    transform: scale(1.1);
+    transition: transform 0.2s linear;
+}
+
+.left_Content img:hover {
+    transform: scale(1.4);
+}
+
+.right_Content h1 {
+    font-size: 40px;
+    color: #333;
+}
+
+.right_Content h2 {
+    font-size: 24px;
+    color: #666;
+    margin: 10px 0 5px;
+}
+
+.right_Content h3 {
+    font-size: 16px;
+    color: #646464;
+    margin: 8px;
+}
+
+.other_Info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Humidity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.Humidity h4,
+.Wind_Speed h4 {
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #666666;
+
+}
+
+.Humidity img,
+.Wind_Speed img {
+    width: 36px;
+    height: auto;
+}
+
+.Wind_Speed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.Humidity_Content h6,
+.Wind_Content h6 {
+    color: #333333;
+    font-size: 22px;
+    margin: 5px;
+
+}
+.Humidity_Content{
+    position: relative;
+}
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 0.4s linear infinite;
+  display: none;
+  margin: auto;
+  margin-top: 20px;
+}
+#weatherIcon  {
+  animation: floatY 3s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-40px); 
+  }
+  100% {
+    transform: translateY(0px); 
+  }
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    .main_weather_Content {
+        flex-direction: column;
+    }
+
+    .left_Content img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .right_Content h1 {
+        font-size: 32px;
+    }
+}

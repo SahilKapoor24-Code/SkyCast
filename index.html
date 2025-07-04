@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather APP</title>
+    <link rel="stylesheet" href="./assets/My_Weather.css">
+</head>
+
+<body>
+    
+    <div class="weather_Container">
+        <div class="weather_Content">
+            
+            <div class="input_City">
+                <input type="text" name="City" id="city" placeholder="Enter city name">
+                <button id="searchBtn">Search</button>
+            </div>
+            
+            <div id="loader" class="loader"></div>
+            <div class="main_weather_Content">
+                <div class="left_Content">
+                    <img src="./imgs/Wheather/clear.png" alt="Weather Icon" id="weatherIcon">
+                </div>
+                <div class="right_Content">
+                    <h1 id="temperature">25°C</h1>
+                    <h2 id="cityName">Chandigarh</h2>
+                    <h3 id="description">Clear Sky</h3>
+                    <div class="other_Info">
+                        <div class="Humidity">
+                            <img src="./assets/imgs/Humid.png" alt="" id="Humid_img">
+                          <div class="Humidity_Content">
+                              <h6 id="Humid" >68%</h6>
+                        <h4>Humidity</h4>
+                          </div>
+                           <div class="Wind_Speed">
+                            <img src="./assets/imgs/Wind (2).png" alt="" id="Wind_img">
+                          <div class="Wind_Content">
+                              <h6 id="Wind" >10km/h</h6>
+                        <h4>Wind Speed</h4>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/My_Weather.js"></script>
+</body>
+
+</html>
